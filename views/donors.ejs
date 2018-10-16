@@ -48,43 +48,26 @@
                         <tr>
                         <th class="col-md-1">#</th>
                         <th class="col-md-2">Name</th>
+                        <th class="col-md-2">Date Of Birth</th>
                         <th class="col-md-2">Blood Group</th>
                         <th class="col-md-2">City</th>
                         <th class="col-md-2">Email</th>
                         </tr>
                         <tr class="warning no-result">
-                        <td colspan="4"><i class="fa fa-warning"></i> No result</td>
+                        <td colspan="5"><i class="fa fa-warning"></i> No result</td>
                         </tr>
                     </thead>
                     <tbody>
+                        <% for (var i=0; i < data.length; i++) { %>
                         <tr>
-                            <th scope="row">1</th>
-                            <td>ABC</td>
-                            <td>A Positive</td>
-                            <td>Karachi</td>
-                            <td>abc@xyz.com</td>
+                            <th scope="row"><%= i+1 %></th>
+                            <td><%= data[i].name %></td>
+                            <td><%= data[i].dob %></td>
+                            <td><%= data[i].bloodgroup %></td>
+                            <td><%= data[i].city %></td>
+                            <td><%= data[i].email %></td>
                         </tr>
-                        <tr>
-                            <th scope="row">2</th>
-                            <td>ABC</td>
-                            <td>A Negative</td>
-                            <td>Karachi</td>
-                            <td>abc@xyz.com</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">3</th>
-                            <td>ABC</td>
-                            <td>O Positive</td>
-                            <td>Lahore</td>
-                            <td>abc@xyz.com</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">4</th>
-                            <td>ABC</td>
-                            <td>O Negative</td>
-                            <td>Islamabad</td>
-                            <td>abc@xyz.com</td>
-                        </tr>
+                        <% } %>
                     </tbody>
                 </table>
             </div>
